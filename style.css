@@ -103,9 +103,13 @@ pre {
 
 .chord {
   display: inline-block;
-  margin-right: 6px;   /* pequeno espaçamento entre cifra e frase */
   font-weight: bold;
   color: var(--accent-blue);
+}
+
+.chord::after {
+  content: " ";       /* injeta um espaço após cada cifra */
+  margin-right: 4px;  /* pequeno espaçamento */
 }
 
 /* === Menu principal === */
@@ -234,5 +238,9 @@ pre {
 
   .song-content {
     font-size: 1.1em;    /* aumenta fonte do conteúdo dentro dos botões */
+  }
+
+  .chord::after {
+    margin-right: 6px;  /* no mobile, espaço um pouco maior */
   }
 }
