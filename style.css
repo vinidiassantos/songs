@@ -85,7 +85,7 @@ pre {
   line-height: 0.80; /* mais compacto */
 }
 
-/* === Classes para letra e tradução === */
+/* === Classes para letra, tradução e cifra === */
 .original {
   font-weight: bold;   /* frase original em negrito */
   display: block;      /* quebra de linha */
@@ -99,6 +99,13 @@ pre {
   color: #090101;      /* quase preto */
   margin: 0;           /* sem espaço extra */
   line-height: 0.80;   /* bem próximo da original */
+}
+
+.chord {
+  display: inline-block;
+  margin-right: 6px;   /* pequeno espaçamento entre cifra e frase */
+  font-weight: bold;
+  color: var(--accent-blue);
 }
 
 /* === Menu principal === */
