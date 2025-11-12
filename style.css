@@ -82,7 +82,7 @@ pre {
   font-size: 0.95rem;
   text-align: left;
   margin: 0 auto;
-  line-height: 1.2; /* compacto */
+  line-height: 1.1; /* mais compacto */
 }
 
 /* === Classes para letra, tradução e cifra === */
@@ -90,7 +90,8 @@ pre {
   font-weight: bold;
   display: block;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.1;
+  margin-bottom: 2px; /* reduz espaço entre original e tradução */
 }
 
 .translation {
@@ -98,7 +99,8 @@ pre {
   font-size: 0.9em;
   color: #090101;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.0;
+  margin-bottom: 6px; /* reduz espaço entre pares */
 }
 
 .chord {
@@ -201,7 +203,7 @@ pre {
 
 .internal-page pre {
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1.1; /* mais compacto */
   color: var(--text-dark);
 }
 
@@ -218,7 +220,7 @@ pre {
 
   pre {
     font-size: 0.8rem;    /* letras menores */
-    line-height: 1.1;
+    line-height: 1.05;    /* ainda mais compacto no mobile */
   }
 
   .menu-button {
@@ -240,6 +242,6 @@ pre {
 
   .song-content {
     font-size: 0.85em;    /* reduz fonte interna */
-    line-height: 1.1;
+    line-height: 1.05;
   }
 }

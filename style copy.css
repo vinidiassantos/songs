@@ -82,23 +82,34 @@ pre {
   font-size: 0.95rem;
   text-align: left;
   margin: 0 auto;
-  line-height: 0.80; /* mais compacto */
+  line-height: 1.2; /* compacto */
 }
 
-/* === Classes para letra e tradução === */
+/* === Classes para letra, tradução e cifra === */
 .original {
-  font-weight: bold;   /* frase original em negrito */
-  display: block;      /* quebra de linha */
-  margin: 0;           /* sem espaço extra */
-  line-height: 0.80;    /* compacto */
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .translation {
-  display: block;      /* nova linha */
-  font-size: 0.92em;   /* menor que original */
-  color: #090101;      /* quase preto */
-  margin: 0;           /* sem espaço extra */
-  line-height: 0.80;    /* bem próximo da original */
+  display: block;
+  font-size: 0.9em;
+  color: #090101;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.chord {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--accent-blue);
+}
+
+.chord::after {
+  content: " ";
+  margin-right: 4px;
 }
 
 /* === Menu principal === */
@@ -115,13 +126,13 @@ pre {
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 24px 32px;
-  font-size: 1.1em;
+  padding: 20px 28px;
+  font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
   text-align: center;
-  min-width: 180px;
+  min-width: 160px;
 }
 
 .menu-button:hover {
@@ -132,8 +143,8 @@ pre {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  padding: 25px;
+  gap: 12px;
+  padding: 20px;
   width: 100%;
   max-width: 1000px;
 }
@@ -142,9 +153,9 @@ pre {
   background-color: var(--accent-blue);
   color: #fff;
   border-radius: 8px;
-  padding: 13px;
+  padding: 10px;
   text-align: center;
-  font-size: 0.99em;
+  font-size: 0.95em;
   text-decoration: none;
   transition: background-color 0.3s ease;
   display: flex;
@@ -159,18 +170,18 @@ pre {
 
 .song-content {
   font-family: 'Segoe UI', Arial, sans-serif;
-  line-height: 0.86;
-  font-size: 0.95em;
+  line-height: 1.2;
+  font-size: 0.9em;
 }
 
 .song-button .details {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 /* === Estilo específico para páginas internas === */
 .internal-page {
   color: var(--text-dark);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .internal-page header {
@@ -179,7 +190,7 @@ pre {
 }
 
 .internal-page footer {
-  padding: 20px;
+  padding: 16px;
   background-color: var(--bg-internal);
 }
 
@@ -189,43 +200,46 @@ pre {
 }
 
 .internal-page pre {
-  font-size: 1.1rem;
-  line-height: 0.80; /* consistente e compacto */
+  font-size: 1rem;
+  line-height: 1.2;
   color: var(--text-dark);
 }
 
 /* === Responsividade === */
 @media (max-width: 600px) {
   body {
-    font-size: 0.9rem;
+    font-size: 0.85rem;   /* menor fonte no mobile */
     padding: 0.5rem;
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;    /* título mais compacto */
   }
 
   pre {
-    font-size: 0.85rem;
-    line-height: 0.80; /* ainda mais compacto no mobile */
+    font-size: 0.8rem;    /* letras menores */
+    line-height: 1.1;
   }
 
   .menu-button {
     width: 100%;
-    font-size: 1em;
-    padding: 16px 24px;
+    font-size: 0.9em;     /* reduz fonte dos botões */
+    padding: 12px 16px;   /* padding menor */
   }
 
   .grid-container {
     grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
   }
 
   .song-button {
-    font-size: 0.85em;
+    font-size: 0.85em;    /* reduz fonte dos blocos */
     padding: 8px;
   }
 
   .song-content {
-    font-size: 0.85em;
+    font-size: 0.85em;    /* reduz fonte interna */
+    line-height: 1.1;
   }
 }
