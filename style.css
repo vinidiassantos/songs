@@ -132,8 +132,8 @@ pre {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  padding: 20px;
+  gap: 15px;
+  padding: 25px;
   width: 100%;
   max-width: 1000px;
 }
@@ -142,9 +142,9 @@ pre {
   background-color: var(--accent-blue);
   color: #fff;
   border-radius: 8px;
-  padding: 10px;
+  padding: 13px;
   text-align: center;
-  font-size: 0.93em;
+  font-size: 0.99em;
   text-decoration: none;
   transition: background-color 0.3s ease;
   display: flex;
