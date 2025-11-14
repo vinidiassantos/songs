@@ -88,17 +88,17 @@ pre {
 /* === Classes para letra, tradução e cifra === */
 .original {
   font-weight: bold;
-  display: block;
+  display: inline;
   margin: 0;
   line-height: 0.95;
   margin-bottom: 2px; /* reduz espaço entre original e tradução */
 }
 
 .translation {
-  display: block;
+  display: inline;
   font-size: 0.9em;
   color: #090101;
-  margin: 0;
+  margin-left: 6px;      /* adiciona espaço lateral */
   line-height: 0.95;
   margin-bottom: 6px; /* reduz espaço entre pares */
 }
