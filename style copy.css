@@ -55,7 +55,7 @@ footer {
 h1 {
   color: var(--accent-red);
   font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 /* === Botão "Back" === */
@@ -82,23 +82,25 @@ pre {
   font-size: 0.95rem;
   text-align: left;
   margin: 0 auto;
-  line-height: 1.0; /* compacto */
+  line-height: 0.95; /* mais compacto */
 }
 
 /* === Classes para letra, tradução e cifra === */
 .original {
   font-weight: bold;
-  display: block;
+  display: inline;
   margin: 0;
-  line-height: 1.0;
+  line-height: 0.95;
+  margin-bottom: 2px; /* reduz espaço entre original e tradução */
 }
 
 .translation {
-  display: block;
+  display: inline;
   font-size: 0.9em;
   color: #090101;
-  margin: 0;
-  line-height: 1.0;
+  margin-left: 6px;      /* adiciona espaço lateral */
+  line-height: 0.95;
+  margin-bottom: 6px; /* reduz espaço entre pares */
 }
 
 .chord {
@@ -170,7 +172,7 @@ pre {
 
 .song-content {
   font-family: 'Segoe UI', Arial, sans-serif;
-  line-height: 1.0;
+  line-height: 0.95;
   font-size: 0.9em;
 }
 
@@ -201,29 +203,29 @@ pre {
 
 .internal-page pre {
   font-size: 1rem;
-  line-height: 1.0;
+  line-height: 0.95; /* mais compacto */
   color: var(--text-dark);
 }
 
 /* === Responsividade === */
 @media (max-width: 600px) {
   body {
-    font-size: 0.85rem;   /* menor fonte no mobile */
+    font-size: 0.98rem;   /* menor fonte no mobile */
     padding: 0.5rem;
   }
 
   h1 {
-    font-size: 1.3rem;    /* título mais compacto */
+    font-size: 1.5rem;    /* título mais compacto */
   }
 
   pre {
-    font-size: 0.8rem;    /* letras menores */
-    line-height: 1.0;
+    font-size: 0.98rem;    /* letras menores */
+    line-height: 0.95;    /* ainda mais compacto no mobile */
   }
 
   .menu-button {
     width: 100%;
-    font-size: 0.9em;     /* reduz fonte dos botões */
+    font-size: 0.99em;     /* reduz fonte dos botões */
     padding: 12px 16px;   /* padding menor */
   }
 
@@ -234,12 +236,12 @@ pre {
   }
 
   .song-button {
-    font-size: 0.85em;    /* reduz fonte dos blocos */
+    font-size: 0.99em;    /* reduz fonte dos blocos */
     padding: 8px;
   }
 
   .song-content {
-    font-size: 0.85em;    /* reduz fonte interna */
-    line-height: 1.0;
+    font-size: 0.99em;    /* reduz fonte interna */
+    line-height: 0.95;
   }
 }
