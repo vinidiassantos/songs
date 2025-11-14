@@ -77,45 +77,32 @@ h1 {
 
 /* === Conteúdo da música === */
 pre {
-  white-space: pre-wrap;      /* respeita quebras entre pares */
+  white-space: pre-wrap;
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 0.95rem;
   text-align: left;
   margin: 0 auto;
-  line-height: 0.95;
-}
-
-/* Mantenha original e tradução na mesma linha e sem quebra entre elas */
-pre .original,
-pre .translation {
-  white-space: nowrap;        /* evita quebra dentro do par */
-  line-height: 0.95;
+  line-height: 0.95; /* mais compacto */
 }
 
 /* === Classes para letra, tradução e cifra === */
 .original {
   font-weight: bold;
-  display: inline;            /* mesma linha */
+  display: inline;
   margin: 0;
-  margin-right: 8px;          /* espaço lateral entre original e tradução */
-  /* margin-bottom não tem efeito em inline */
+  line-height: 0.95;
+  margin-bottom: 2px; /* reduz espaço entre original e tradução */
 }
 
 .translation {
-  display: inline;            /* mesma linha */
+  display: inline;
   font-size: 0.9em;
   color: #090101;
-  margin: 0;                  /* não usar margin-bottom em inline */
+  margin-left: 6px;      /* adiciona espaço lateral */
+  line-height: 0.95;
+  margin-bottom: 6px; /* reduz espaço entre pares */
 }
 
-/* Espaço entre pares (separação entre uma dupla original+tradução e a próxima).
-   Funciona se houver quebra de linha no HTML dentro do <pre>.
-   Se quiser controle mais fino, use um wrapper .pair no HTML. */
-pre span.translation {
-  /* como o pre respeita as quebras, essa regra é opcional */
-}
-
-/* Cifras (se ainda existirem) */
 .chord {
   display: inline-block;
   font-weight: bold;
@@ -184,7 +171,7 @@ pre span.translation {
 }
 
 .song-content {
-  font-family: 'Segoe UI', Arial, sans-serif';
+  font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 0.95;
   font-size: 0.9em;
 }
@@ -216,35 +203,30 @@ pre span.translation {
 
 .internal-page pre {
   font-size: 1rem;
-  line-height: 0.95;
+  line-height: 0.95; /* mais compacto */
   color: var(--text-dark);
 }
 
 /* === Responsividade === */
 @media (max-width: 600px) {
   body {
-    font-size: 0.98rem;
+    font-size: 0.98rem;   /* menor fonte no mobile */
     padding: 0.5rem;
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem;    /* título mais compacto */
   }
 
   pre {
-    font-size: 0.98rem;
-    line-height: 0.95;
-  }
-
-  /* Em telas pequenas, se começar a quebrar, diminua um pouco a tradução */
-  pre .translation {
-    font-size: 0.88em;
+    font-size: 0.98rem;    /* letras menores */
+    line-height: 0.95;    /* ainda mais compacto no mobile */
   }
 
   .menu-button {
     width: 100%;
-    font-size: 0.99em;
-    padding: 12px 16px;
+    font-size: 0.99em;     /* reduz fonte dos botões */
+    padding: 12px 16px;   /* padding menor */
   }
 
   .grid-container {
@@ -254,21 +236,12 @@ pre span.translation {
   }
 
   .song-button {
-    font-size: 0.99em;
+    font-size: 0.99em;    /* reduz fonte dos blocos */
     padding: 8px;
   }
 
   .song-content {
-    font-size: 0.99em;
+    font-size: 0.99em;    /* reduz fonte interna */
     line-height: 0.95;
   }
-}
-
-/* === (Opcional) Estrutura com wrapper por par para controle total ===
-   No HTML, envolva cada par em: <div class="pair"><span class="original">...</span> <span class="translation">...</span></div>
-   Assim você controla o espaço entre pares com margin-bottom. */
-.pair {
-  white-space: nowrap;        /* mantém original e tradução juntos */
-  line-height: 0.95;
-  margin-bottom: 4px;         /* espaço entre pares */
 }
